@@ -6,19 +6,51 @@ on:
     branches: [ "main" ] 
   pull_request:
     branches: [ "main" ] 
+    
+env:
+  TEST_FULL_ACR_NAME: brightstraining24fall.azurecr.io
+  TEST_IMAGE_REPOSITORY: github-actions/container-app
  
 jobs:
   hello-world-job:
     runs-on: ubuntu-latest
- 
-    steps:
-    - name: Print Hello World
-      run: echo "Hello, World!"
 
-    - uses: actions/checkout@v4
-    - name: Build and upload Docker image
-      run: | 
-        docker build ./ArtistAPI -t amardeep/newimage
-        docker tag amardeep/newimage ${{secrets.REGISTRY}}/amardeep/newimage:latest
-        docker login ${{secrets.REGISTRY}} -u ${{secrets.USERNAME}} -p ${{secrets.PASSWORD}} 
-        docker push ${{secrets.REGISTRY}}/amardeep/newimage:latest
+    steps:
+      - name: Checkout action repository
+        uses: actions/checkout@v3
+
+      - name: Clone Oryx repository
+        uses: actions/checkout@v3
+        with:
+          repository: microsoft/Oryx
+          path: oryx
+
+      - name: Log in to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.DEPLOYMENT_CREDENTIALS }}
+
+      - name: Execute Azure Container Apps Build and Deploy Action
+        uses: ./
+        with:
+          acrName: ${{ secrets.REGISTRY }}
+          acrUsername: ${{ secrets.USERNAME }}
+          acrPassword: ${{ secrets.PASSWORD }}
+          containerAppName: amardeep_container 
+          containerAppEnvironment: ${{ vars.TEST_EXISTING_CONTAINER_APP_ENV }}
+          resourceGroup: rg-amardeep-test-01
+          imageToBuild: ${{ env.TEST_FULL_ACR_NAME }}/${{ env.TEST_IMAGE_REPOSITORY }}:latest
+
+      - name: Delete created Azure Container App
+        if: ${{ always() }}
+        shell: bash
+        run: az containerapp delete -n amardeep_container  -g ${{ vars.TEST_RESOURCE_GROUP_NAME }} -y
+
+      - name: Delete pushed image
+        if: ${{ always() }}
+        shell: bash
+        run: az acr repository delete -n ${{ secrets.REGISTRY }} -t ${{ env.TEST_IMAGE_REPOSITORY }}:${{ env.TEST_IMAGE_TAG }} -y
+
+
+        
+      
