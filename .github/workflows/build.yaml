@@ -1,21 +1,21 @@
-name: docker build
-
+name: Hello World
+ 
+ 
 on:
   push:
-    branches: 
-    - main
-    pull_request:
-      branches:
-      - main
-    
-
+    branches:
+      - main  
+  pull_request:
+    branches:
+      - main  
+ 
 jobs:
   hello-world-job:
     runs-on: ubuntu-latest
-
-    steps: 
-    - name: checkout from repo
-    uses: actions/checkout@v2
-
-    -name: Print Hello World
-    uses: echo "Hello, World!"        
+ 
+    steps:
+    - name: Sjekker ut repository
+      uses: actions/checkout@v2
+ 
+    - name: Print Hello World
+      run: echo "Hello, World!"
