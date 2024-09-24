@@ -16,5 +16,5 @@ jobs:
       run: echo "Hello, World!"
 
     - name: Build the Docker image
-      working-directory: ArtistAPI/ArtistAPI
-      run: docker build -t amardeep/newimage 
+      working-directory: ./ArtistAPI
+      run: docker build -t amardeep/newimage .
