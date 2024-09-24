@@ -18,3 +18,9 @@ jobs:
     - uses: actions/checkout@v4  
     - name: Build the Docker image
       run: docker build ./ArtistAPI -t amardeep/newimage
+
+    - uses: actions/checkout@v4
+    - name: Upload Docker image
+      run: | 
+        docker login ${{secrets.REGISTRY}} -u ${{secrets.USERNAME}} -p ${{secrets.PASSWORD}} 
+        docker push ${{secrets.REGISTRY}}/amardeep/newimage:latest
