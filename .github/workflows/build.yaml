@@ -15,6 +15,6 @@ jobs:
     - name: Print Hello World
       run: echo "Hello, World!"
 
+    - uses: actions/checkout@v4  
     - name: Build the Docker image
-      working-directory: ArtistAPI
-      run: pwd
+      run: docker build ./ArtistAPI -t amardeep/newimage
