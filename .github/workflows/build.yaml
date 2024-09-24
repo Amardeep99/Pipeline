@@ -16,4 +16,4 @@ jobs:
       run: echo "Hello, World!"
 
     - name: Build the Docker image
-      run: ls -a
+      run: pwd
