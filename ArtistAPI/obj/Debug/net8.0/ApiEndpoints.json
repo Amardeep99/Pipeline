@@ -1,0 +1,60 @@
+[
+  {
+    "ContainingType": "ArtistAPI.Controllers.ArtistController",
+    "Method": "GetAllArtist",
+    "RelativePath": "artists",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ArtistAPI.Controllers.ArtistController",
+    "Method": "CreateArtist",
+    "RelativePath": "artists",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "artist",
+        "Type": "ArtistAPI.Models.Artist",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ArtistAPI.Controllers.ArtistController",
+    "Method": "GetArtist",
+    "RelativePath": "artists/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ArtistAPI.Controllers.ArtistController",
+    "Method": "DeleteArtist",
+    "RelativePath": "artists/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

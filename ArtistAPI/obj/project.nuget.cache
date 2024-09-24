@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "giwx9Xjj4uM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\AmardeepSingh\\Desktop\\GithubActions\\ArtistAPI\\ArtistAPI\\ArtistAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AmardeepSingh\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.21.0\\microsoft.visualstudio.azure.containers.tools.targets.1.21.0.nupkg.sha512"
+  ],
+  "logs": []
+}

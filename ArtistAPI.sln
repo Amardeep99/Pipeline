@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtistAPI", "ArtistAPI\ArtistAPI.csproj", "{0F82724A-14F7-4914-BB9F-2EF84180FA2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArtistAPITests", "ArtistAPITests\ArtistAPITests.csproj", "{080ECEC5-C90C-42DF-9BE3-823F9D5402DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F82724A-14F7-4914-BB9F-2EF84180FA2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F82724A-14F7-4914-BB9F-2EF84180FA2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F82724A-14F7-4914-BB9F-2EF84180FA2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F82724A-14F7-4914-BB9F-2EF84180FA2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{080ECEC5-C90C-42DF-9BE3-823F9D5402DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{080ECEC5-C90C-42DF-9BE3-823F9D5402DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{080ECEC5-C90C-42DF-9BE3-823F9D5402DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{080ECEC5-C90C-42DF-9BE3-823F9D5402DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4844DF2F-DE6F-4538-804B-23D6CBA79BBA}
+	EndGlobalSection
+EndGlobal

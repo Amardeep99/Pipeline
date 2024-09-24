@@ -1,0 +1,7 @@
+C:\Users\AmardeepSingh\Desktop\GithubActions\ArtistAPI\ArtistAPI\bin\Release\net8.0\publish\ArtistAPI.exe
+C:\Users\AmardeepSingh\Desktop\GithubActions\ArtistAPI\ArtistAPI\bin\Release\net8.0\publish\appsettings.Development.json
+C:\Users\AmardeepSingh\Desktop\GithubActions\ArtistAPI\ArtistAPI\bin\Release\net8.0\publish\appsettings.json
+C:\Users\AmardeepSingh\Desktop\GithubActions\ArtistAPI\ArtistAPI\bin\Release\net8.0\publish\ArtistAPI.dll
+C:\Users\AmardeepSingh\Desktop\GithubActions\ArtistAPI\ArtistAPI\bin\Release\net8.0\publish\ArtistAPI.deps.json
+C:\Users\AmardeepSingh\Desktop\GithubActions\ArtistAPI\ArtistAPI\bin\Release\net8.0\publish\ArtistAPI.runtimeconfig.json
+C:\Users\AmardeepSingh\Desktop\GithubActions\ArtistAPI\ArtistAPI\bin\Release\net8.0\publish\ArtistAPI.pdb
