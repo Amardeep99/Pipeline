@@ -18,4 +18,4 @@ jobs:
     - name: Build the Docker image
       run:
         cd ArtistAPI
-        docker build -t amardeep_api -f Dockerfile .
+        docker build -t amardeep/newimage
