@@ -19,5 +19,6 @@ jobs:
     - name: Build and upload Docker image
       run: | 
         docker build ./ArtistAPI -t amardeep/newimage
+        docker tag amardeep/newimage ${{secrets.REGISTRY}}/amardeep/newimage:latest
         docker login ${{secrets.REGISTRY}} -u ${{secrets.USERNAME}} -p ${{secrets.PASSWORD}} 
         docker push ${{secrets.REGISTRY}}/amardeep/newimage:latest
