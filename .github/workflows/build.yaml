@@ -14,8 +14,7 @@ jobs:
     steps:
     - name: Print Hello World
       run: echo "Hello, World!"
-      
+
     - name: Build the Docker image
-      run:
-        cd ArtistAPI
-        docker build -t amardeep/newimage
+      working-directory: ./ArtistAPI
+      run: docker build -t amardeep/newimage 
