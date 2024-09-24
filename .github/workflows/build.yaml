@@ -40,7 +40,7 @@ jobs:
           imageToDeploy: amardeep/newimage
         
       - name: Test
-        run: az identity create -g rg-bjo-brightscourse-01 -n id-deployment-01
+        run: az identity create -g rg-amardeep-test-01 -n amardeep-container
       
 
 
