@@ -17,4 +17,4 @@ jobs:
 
     - name: Build the Docker image
       working-directory: ./ArtistAPI
-      run: docker build -t amardeep/newimage .
+      run: ls -a
