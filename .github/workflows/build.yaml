@@ -26,30 +26,17 @@ jobs:
           path: oryx
 
       - name: Log in to Azure
-        uses: azure/login@v1
+        uses: azure/login@v2
         with:
           creds: ${{ secrets.DEPLOYMENT_CREDENTIALS }}
-
-      - name: Execute Azure Container Apps Build and Deploy Action
-        uses: ./
+      
+      - name: Deploy
+        uses: azure/container-apps-deploy-action@v1
         with:
-          acrName: ${{ secrets.REGISTRY }}
-          acrUsername: ${{ secrets.USERNAME }}
-          acrPassword: ${{ secrets.PASSWORD }}
-          containerAppName: amardeep_container 
-          containerAppEnvironment: ${{ vars.TEST_EXISTING_CONTAINER_APP_ENV }}
+          containerAppName: amardeep-container
           resourceGroup: rg-amardeep-test-01
-          imageToBuild: ${{ env.TEST_FULL_ACR_NAME }}/${{ env.TEST_IMAGE_REPOSITORY }}:latest
+          containerAppEnvironment: amardeep-environment
 
-      - name: Delete created Azure Container App
-        if: ${{ always() }}
-        shell: bash
-        run: az containerapp delete -n amardeep_container  -g ${{ vars.TEST_RESOURCE_GROUP_NAME }} -y
-
-      - name: Delete pushed image
-        if: ${{ always() }}
-        shell: bash
-        run: az acr repository delete -n ${{ secrets.REGISTRY }} -t ${{ env.TEST_IMAGE_REPOSITORY }}:${{ env.TEST_IMAGE_TAG }} -y
 
 
         
