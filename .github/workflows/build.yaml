@@ -3,11 +3,9 @@ name: Hello World
  
 on:
   push:
-    branches:
-      - main  
+    branches: [ "master" ] 
   pull_request:
-    branches:
-      - main  
+    branches: [ "master" ] 
  
 jobs:
   hello-world-job:
@@ -19,3 +17,7 @@ jobs:
  
     - name: Print Hello World
       run: echo "Hello, World!"
+    
+    - uses: actions/checkout@v4
+    - name: Build the Docker image
+      run: docker build -t amardeep_api -f Dockerfile .
