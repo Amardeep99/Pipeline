@@ -16,5 +16,4 @@ jobs:
       run: echo "Hello, World!"
 
     - name: Build the Docker image
-      working-directory: ./ArtistAPI
       run: ls -a
