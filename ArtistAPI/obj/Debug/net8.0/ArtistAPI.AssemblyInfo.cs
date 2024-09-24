@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ArtistAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2367c3a0b60bd17507dd9922e19637e637004a68")]
 [assembly: System.Reflection.AssemblyProductAttribute("ArtistAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ArtistAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

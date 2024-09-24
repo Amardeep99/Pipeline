@@ -48,3 +48,4 @@ C:\Users\AmardeepSingh\Desktop\GithubActions\ArtistAPI\ArtistAPI\obj\Debug\net8.
 C:\Users\AmardeepSingh\Desktop\GithubActions\ArtistAPI\ArtistAPI\obj\Debug\net8.0\ArtistAPI.pdb
 C:\Users\AmardeepSingh\Desktop\GithubActions\ArtistAPI\ArtistAPI\obj\Debug\net8.0\ArtistAPI.genruntimeconfig.cache
 C:\Users\AmardeepSingh\Desktop\GithubActions\ArtistAPI\ArtistAPI\obj\Debug\net8.0\ref\ArtistAPI.dll
+C:\Users\AmardeepSingh\Desktop\GithubActions\ArtistAPI\ArtistAPI\obj\Debug\net8.0\ArtistAPI.sourcelink.json
